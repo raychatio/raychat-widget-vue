@@ -1,6 +1,6 @@
 {
   "name": "raychat-widget-vue",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A raychat library",
   "type": "module",
   "main": "./dist/raychat-widget.umd.js",
