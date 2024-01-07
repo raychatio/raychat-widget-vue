@@ -1,2 +1,2 @@
-import RaychatWidgetVue from "./components/RaychatWidget.vue";
-export { RaychatWidgetVue };
+import RaychatWidget from "./components/RaychatWidget.vue";
+export { RaychatWidget };
