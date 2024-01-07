@@ -1,18 +1,67 @@
-# Vue 3 + TypeScript + Vite
+# RayChat widget installer for VueJS
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+![raychat][logo]
 
-## Recommended IDE Setup
+#### The new online chat experience begins here!
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Get closer to your leads and customers with a website chat widget. Adding a chat widget to your website will make your customer service experience even more exceptional.
 
-## Type Support For `.vue` Imports in TS
+- [Install](#install)
+- [Use](#use)
+- [Props](#props)
+- [License](#license)
+- [Author](#author)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Install
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+```bash
+npm i raychat-widget-vue
+```
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## Use
+
+> Get `token` from [raychat.io][raychat-landing]
+
+Wrote to index.js:
+
+```js
+// Other imports...
+<script setup lang="ts">
+// other imports
+import { RaychatWidget } from 'raychat-widget-vue'
+</script>
+
+<template>
+  <header>
+    <!-- other -->
+  </header>
+
+  <main>
+    <!-- other -->
+  </main>
+  <RaychatWidget token="c030a005-xxxx-xxxx-xxxx-19ead862dc7f" type="SEO_FRIENDLY"/>
+</template>
+```
+
+## Props
+
+| Props | Required | Default Value | Description                                            |
+| ----- | -------- | ------------- | ------------------------------------------------------ |
+| token | true     | undefined     | Get `token` from [raychat.io][raychat-get-token]       |
+| type  | false    | NORMAL        | Widget load types: [ NORMAL, SEO_FRIENDLY, FAST_LOAD ] |
+
+### License
+
+MIT
+
+### Author
+
+Mahdi Vajdi<br>
+Github: [@mahdi-vajdi][author-github]<br>
+Email: [mahdivajdii@gmail.com][author-email]<br>
+
+[logo]: https://raychat.io/_next/static/media/raychat-logo-english.486d7b96.svg
+[raychat-landing]: https://raychat.io/signup
+[raychat-get-token]: https://raychat.io/dashboard/widget-installation
+[author-github]: https://github.com/mahdi-vajdi
+[author-email]: mailto:mahdivajdii@gmail.com
