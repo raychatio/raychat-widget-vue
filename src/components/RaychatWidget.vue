@@ -11,8 +11,7 @@ import type { PropType } from 'vue';
 declare global {
   interface Window {
     RAYCHAT_TOKEN: string;
-    SEO_FRIENDLY: boolean;
-    FAST_LOAD: boolean;
+    LOAD_TYPE: string;
   }
 }
 
@@ -47,9 +46,9 @@ export default defineComponent({
 
     // Set widget load type
     if (this.type.toUpperCase() === "SEO_FRIENDLY") {
-      window.SEO_FRIENDLY = true;
+      window.LOAD_TYPE = "SEO_FRIENDLY";
     } else if (this.type.toUpperCase() === "FAST_LOAD") {
-      window.FAST_LOAD = true;
+      window.LOAD_TYPE = "FAST_LOAD";
     }
 
     // Set the script to the head
